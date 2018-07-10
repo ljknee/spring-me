@@ -12,3 +12,10 @@ CREATE TABLE products(
 	units_in_order BIGINT,
 	discontinued BOOLEAN
 );
+
+CREATE TABLE customers(
+	id VARCHAR(25) PRIMARY KEY,
+	customer_name VARCHAR(50),
+	no_order_made BIGINT,
+	customer_address VARCHAR(250)
+);
