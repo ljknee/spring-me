@@ -10,11 +10,12 @@ public class Product implements Serializable {
 	private String name;
 	private BigDecimal unitPrice;
 	private String description;
-	private String manufacture;
+	private String manufacturer;
 	private String category;
 	private long unitsInStock;
 	private long unitsInOrder;
 	private String condition;
+	private boolean discontinued;
 
 	public Product() {
 		super();
@@ -52,12 +53,12 @@ public class Product implements Serializable {
 		this.description = description;
 	}
 
-	public String getManufacture() {
-		return manufacture;
+	public String getManufacturer() {
+		return manufacturer;
 	}
 
-	public void setManufacture(String manufacture) {
-		this.manufacture = manufacture;
+	public void setManufacturer(String manufacture) {
+		this.manufacturer = manufacture;
 	}
 
 	public String getCategory() {
@@ -96,6 +97,14 @@ public class Product implements Serializable {
 		this.productId = productId;
 		this.name = name;
 		this.unitPrice = unitPrice;
+	}
+
+	public boolean isDiscontinued() {
+		return discontinued;
+	}
+
+	public void setDiscontinued(boolean discontinued) {
+		this.discontinued = discontinued;
 	}
 
 	@Override
