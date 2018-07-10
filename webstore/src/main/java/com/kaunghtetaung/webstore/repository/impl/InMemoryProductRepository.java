@@ -48,4 +48,17 @@ public class InMemoryProductRepository implements ProductRepository {
 
 	}
 
+	@Override
+	public void updateStock(String productId, long noOfUnits) {
+		
+		String sql = "UPDATE products SET units_in_stock = :unitsInStock WHERE id = :id";
+		Map<String, Object> params = new HashMap<>();
+		
+		params.put("unitsInStock", noOfUnits);
+		params.put("id", productId);
+		
+		jdbcTemplate.update(sql, params);
+		
+	}
+
 }
